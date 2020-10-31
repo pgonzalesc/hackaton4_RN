@@ -50,8 +50,8 @@
 
 .dataBody {
     margin: auto;
-    padding: 40px;
-    display: flex;
+    padding: 20px;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@
 }
 
 .formFooter {
-    padding-top: 40px;
+    padding-top: 20px;
     height: 100%;
 }
 
@@ -93,7 +93,7 @@
     width: 100%;
     border: none;
     outline: none;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     padding: 10px;
     background: #05004C;
@@ -120,12 +120,16 @@
     width: 100%;
 }
 
-/* hide our custom/fake placeholder text when in focus to show the default
- * 'mm/dd/yyyy' value and when valid to show the users' date of birth value.
- */
  .login .loginContainer .frameForm input[type="date"]:focus::before,
  .login .loginContainer .frameForm input[type="date"]:valid::before { display: none }
 
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
+}
+
+.login .loginContainer .frameData .dataContainer .dataBody label {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1;
+    margin: 14px 0;
 }
