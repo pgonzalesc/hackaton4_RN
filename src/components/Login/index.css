@@ -3,6 +3,7 @@
     padding: 20px 20px;
     display: flex;
     min-height: 100vh;
+    background: #BCE5F5;
 }
 
 .loginContainer {
@@ -19,19 +20,112 @@
 }
 
 .frameData {
-    padding: 60px;
+    padding: 20px;
     background: white;
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+}
+
+.frameForm {
+    /*background: #05004C;*/
+    background: rgb(5,0,76);
+    background: radial-gradient(circle, rgba(5,0,76,1) 55%, rgba(6,76,165,1) 100%, rgba(0,212,255,1) 100%, rgba(2,0,36,1) 100%);
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.frameForm {
-    padding: 60px;
-    background: #05004C;
-    width: 40%;
+.dataContainer {
+    margin: auto;
+    height: 100%;
+}
+
+.dataTitle {
+    margin: auto;
+    padding: 20px;
+}
+
+.dataBody {
+    margin: auto;
+    padding: 40px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(240, 240, 240);
+}
+
+.formHeader {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formBody {
+    padding: 60px;
+}
+
+.formFooter {
+    padding-top: 40px;
+    height: 100%;
+}
+
+.login .loginContainer .frameForm .formHeader label {
+    font-size: 22px;
+    margin: 14px 0;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+}
+
+.login .loginContainer .frameForm .formBody input {
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 10px;
+    background: #05004C;
+    color: white;
+    letter-spacing: 1px;
+    border-bottom: rgb(100, 100, 100) 1px solid;
+}
+
+.login .loginContainer .frameForm button {
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 15px 0;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background-color: #7176D4;
+    cursor: pointer;
+}
+
+.login .loginContainer .frameForm input[type="date"]::before { 
+    content: attr(data-placeholder);
+    width: 100%;
+}
+
+/* hide our custom/fake placeholder text when in focus to show the default
+ * 'mm/dd/yyyy' value and when valid to show the users' date of birth value.
+ */
+ .login .loginContainer .frameForm input[type="date"]:focus::before,
+ .login .loginContainer .frameForm input[type="date"]:valid::before { display: none }
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
