@@ -86,7 +86,6 @@
 }
 
 .login .loginContainer .frameForm .formBody input {
-    margin-bottom: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,4 +131,11 @@
     font-size: 18px;
     line-height: 1;
     margin: 14px 0;
+}
+
+.login .loginContainer .frameForm .formBody .errorMsg {
+    color: red;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px;
 }
